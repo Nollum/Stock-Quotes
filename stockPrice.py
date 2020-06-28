@@ -5,7 +5,7 @@ import requests
 
 def getQuote(url):
     try:
-        res = requests.get(url)
+        res = requests.get(url) #use this website https://web.tmxmoney.com/getquote.php
         if res.raise_for_status() != None:
             print(res.raise_for_status())
         soup = bs4.BeautifulSoup(res.text, 'html.parser')
